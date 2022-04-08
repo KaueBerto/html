@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<style>*{
+    margin: 0;
+    padding: 0;
+}
+
+#titulo{
+    font-family: montserrat black;
+    color: rgb(41, 11, 97);
+    margin-left: 7%;
+}
+
+#subtitulo {
+    font-family: sans-serif;
+    color:rgb(41, 11, 97);
+    margin-left: 5.8%;
+}
+
+fieldset {
+    border:0;
+}
+
+body{
+    background-image: linear-gradient(to right, rgba(9, 18, 148, 0.555), rgba(76, 60, 134, 0.459),rgba(68, 0, 255, 0.623));
+    font-family: sans-serif;
+    font-size: 1em;
+    color: linear rgb(41, 11, 97);
+    margin-left:36%;
+    margin-top: 3%;
+    justify-content: center;
+}
+
+input, select, textarea, button{
+    border-radius: 5px;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label{
+    margin-bottom: 0.4em;
+    color:rgb(41, 11, 97);
+    display: block;
+}
+.textofinal label{
+    margin-bottom: 0;
+    color:rgb(41, 11, 97);
+    display: block;
+    margin-left:14%;
+}
+.grupo label{
+    color: rgb(41, 11, 97);
+}
+fieldset.grupo .campo{
+    float: left;
+    margin-right: 8em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.5em;
+    border: 1px solid rgb(41, 11, 97);
+    box-shadow: 8px 8px 8px rgb(0,0,0,0.2);
+    display: block;
+}
+.campo input[type="text"], .campo input[type="telefone"], .campo select, .campo textarea {
+    padding: 0.5em;
+    border: 1px solid rgb(41, 11, 97);
+    box-shadow: 8px 8px 8px rgb(0,0,0,0.2);
+    display: block;
+}
+
+.campo, g select option{
+    padding-right:1em;
+}
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #a54747;
+}
+
+.botao {
+    font-size: 1.2em;
+    background: rgb(41, 11, 97);
+    border:0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao:hover {
+    background: #b43a3a;
+    box-shadow: insert 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+#check {
+    display:inline-block;
+}
+
+</style>    
+
+<body>
+    <div class="campo">
+        <h1 id="titulo">Cadastro de Clientes</h1>
+        <p id="subtitulo">Complete suas Informações para nossa loja de roupas</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" required>    
+            </div>
+        </fieldset>
+
+    <fieldset class="grupo">
+
+        <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="telefone" name="telefone" id="telefone" required>
+        </div>
+
+    </fieldset>
+
+        <div class="campo">
+            <label><strong>Onde você mora?</strong></label>
+
+            <Label>
+                <input type="radio" name="devweb" value="front">Dracena
+            </Label>
+
+            <label>
+                <input type="radio" name="devweb" value="Tupi">Tupi Paulista
+
+            </label>
+
+            <label>
+                <input type="radio" name="devweb" value="junq">Junqueirópolis
+
+            </label>
+
+            <label>
+                <input type="radio" name="devweb" value="outros">Outros
+            </label>
+
+        </div>
+
+        <div class="campo">
+            <label for="sexo"><strong>Sexo:</strong></label>
+            <select id="sexo">
+                <option selected disabled value="">Selecione</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Outro</option>
+            </select>
+        </div>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione os produtos que te interessa:</strong></label><br><br>
+
+                <input type="checkbox" id="produto1" name="produto1" value="sapatos">
+                <label for="produto1">Sapatos</label>
+
+                <input type="checkbox" id="produto2" name="produto2" value="camisetas">
+                <label for="produto2">Camisetas</label>
+
+                <input type="checkbox" id="produto3" name="produto3" value="camisas">
+                <label for="produto3">Camisas</label>
+
+                <input type="checkbox" id="produto4" name="produto4" value="bones">
+                <label for="produto4">Bonés</label>
+
+                <input type="checkbox" id="produto5" name="produto5" value="calças">
+                <label for="produto5">Calças</label>
+
+                <input type="checkbox" id="produto6" name="produto6" value="vestidos">
+                <label for="produto6">Vestidos</label>
+
+                <input type="checkbox" id="produto7" name="produto7" value="saltos">
+                <label for="produto7">Saltos</label>
+            </div>
+
+        </fieldset>
+
+        <div class="textofinal">
+            <br>
+            <label><strong>O que podemos melhorar?</strong></label><br>
+            <textarea rows="10" style="width: 40em" id="melhorias" name="melhorias"></textarea>
+        </div>
+
+        <button class="botao" type="submit">Concluído</button>
+
+        <div class="grupo"><br><br><br><br><br><br><br><br><br><br><br>
+            <p id="subtitulo">Desenvolvido por Kauê Berto, todos direitos reservados ©</p>
+            <br>
+        </div>
+
+    </form>
+</body>
+</html>
